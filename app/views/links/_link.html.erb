@@ -1,5 +1,8 @@
   <ul>
   <% @links.each do |link| %>
-    <li id=<%= dom_id(link)%>><%= link.url %></li>
+    <li id=<%= dom_id(link)%>>
+     <%= link_to link.to_param, link %>
+     <%= link.url %>
+    </li>
   <% end %>
   </ul>
