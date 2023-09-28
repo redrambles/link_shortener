@@ -23,8 +23,4 @@ class LinksController < ApplicationController
       params.require(:link).permit(:url)
     end
 
-    # We are overwriting the default find behaviour to decode back to integer
-    def set_link
-      @link = Link.find((params[:id]))
-    end
   end
